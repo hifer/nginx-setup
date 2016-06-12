@@ -3,20 +3,20 @@
 # version 1.0 
 # auth:lvhifer@163.com 2016/01/09
 
-if [ ! -f "release-20160612.zip" ]; then
+if [ ! -f "master.zip" ]; then
  echo "now downloading setup files,this may spend few minutes"
- wget -c https://github.com/hifer/nginx-setup/archive/release-20160612.zip > /dev/null 2>&1
- unzip release-20160612.zip > /dev/null 2>&1
- cd nginx-setup-release-20160612
+ wget -c https://github.com/hifer/nginx-setup/archive/master.zip > /dev/null 2>&1
+ unzip master.zip > /dev/null 2>&1
+ cd nginx-setup-master
  #yum
  yum install -y zlib-devel  > /dev/null 2>&1
  yum install -y gcc gcc-c++  > /dev/null 2>&1
 else
- mv release-20160612.zip release-20160612.zip.bak
+ mv master.zip master.zip.bak
  echo "now downloading setup files,this may spend few minutes"
- wget -c https://github.com/hifer/nginx-setup/archive/release-20160612.zip > /dev/null 2>&1
- unzip release-20160612.zip > /dev/null 2>&1
- cd nginx-setup-release-20160612
+ wget -c https://github.com/hifer/nginx-setup/archive/master.zip > /dev/null 2>&1
+ unzip master.zip > /dev/null 2>&1
+ cd nginx-setup-master
  #yum
  yum install -y zlib-devel  > /dev/null 2>&1
  yum install -y gcc gcc-c++  > /dev/null 2>&1
@@ -89,12 +89,8 @@ fi
 mkdir -p $nginxStatic
 \cp index.html $nginxStatic
 
-#start nginx
-#service nginx restart
-#$nginxPath/sbin/nginx -c $nginxPath/conf/nginx.conf
 
 cd $basePath
 rm -rf nginx-1.8.0.tar.gz pcre-8.38.tar.gz
 
-#/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 
