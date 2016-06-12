@@ -1,14 +1,7 @@
 #!/bin/bash
 # shell script to install nginx1.8.0
 # version 1.0 
-# auth:lvhaif@minmetals.com 2016/01/09
-
-date=`date +%Y-%m-%d`
-basePath=$(cd "$(dirname "$0")"; pwd)
-setPath=/usr/local
-pcrePath=$setPath/pcre-8.38
-nginxPath=$setPath/nginx
-nginxStatic=$setPath/static
+# auth:lvhifer@163.com 2016/01/09
 
 if [ ! -f "release-20160612.zip" ]; then
  echo "now downloading setup files,this may spend few minutes"
@@ -23,6 +16,12 @@ else
  cd nginx-setup-release-20160612
 fi
 
+date=`date +%Y-%m-%d`
+basePath=$(cd "$(dirname "$0")"; pwd)
+setPath=/usr/local
+pcrePath=$setPath/pcre-8.38
+nginxPath=$setPath/nginx
+nginxStatic=$setPath/static
 
 #install pcre
 cd $basePath
