@@ -14,11 +14,13 @@ if [ ! -f "release-20160612.zip" ]; then
  echo "now downloading setup files,this may spend few minutes"
  wget -c https://github.com/hifer/nginx-setup/archive/release-20160612.zip > /dev/null 2>&1
  unzip release-20160612.zip > /dev/null 2>&1
+ cd nginx-setup-release-20160612
 else
  mv release-20160612.zip release-20160612.zip.bak
  echo "now downloading setup files,this may spend few minutes"
  wget -c https://github.com/hifer/nginx-setup/archive/release-20160612.zip > /dev/null 2>&1
  unzip release-20160612.zip > /dev/null 2>&1
+ cd nginx-setup-release-20160612
 fi
 
 
