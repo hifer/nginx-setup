@@ -8,13 +8,20 @@ if [ ! -f "release-20160612.zip" ]; then
  wget -c https://github.com/hifer/nginx-setup/archive/release-20160612.zip > /dev/null 2>&1
  unzip release-20160612.zip > /dev/null 2>&1
  cd nginx-setup-release-20160612
+ #yum
+ yum install -y zlib-devel
+ yum install -y gcc gcc-c++
 else
  mv release-20160612.zip release-20160612.zip.bak
  echo "now downloading setup files,this may spend few minutes"
  wget -c https://github.com/hifer/nginx-setup/archive/release-20160612.zip > /dev/null 2>&1
  unzip release-20160612.zip > /dev/null 2>&1
  cd nginx-setup-release-20160612
+ #yum
+ yum install -y zlib-devel
+ yum install -y gcc gcc-c++
 fi
+
 
 date=`date +%Y-%m-%d`
 basePath=$(cd "$(dirname "$0")"; pwd)
