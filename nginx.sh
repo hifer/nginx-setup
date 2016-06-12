@@ -9,8 +9,8 @@ if [ ! -f "release-20160612.zip" ]; then
  unzip release-20160612.zip > /dev/null 2>&1
  cd nginx-setup-release-20160612
  #yum
- yum install -y zlib-devel
- yum install -y gcc gcc-c++
+ yum install -y zlib-devel  > /dev/null 2>&1
+ yum install -y gcc gcc-c++  > /dev/null 2>&1
 else
  mv release-20160612.zip release-20160612.zip.bak
  echo "now downloading setup files,this may spend few minutes"
@@ -18,8 +18,8 @@ else
  unzip release-20160612.zip > /dev/null 2>&1
  cd nginx-setup-release-20160612
  #yum
- yum install -y zlib-devel
- yum install -y gcc gcc-c++
+ yum install -y zlib-devel  > /dev/null 2>&1
+ yum install -y gcc gcc-c++  > /dev/null 2>&1
 fi
 
 
